@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<body>
+    <meta charset="UTF-8">
+    <title>Painters List</title>
+</head>
+    <ul>
+        {% for painter in painters %}
+            <li>{{painter.name}} - {{painter.period}}</li>
+        {% empty %}
+        <h5>No painters in the database.</h5>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>
+
+
+
+
+
+
+
+</html>

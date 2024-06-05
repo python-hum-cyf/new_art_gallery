@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
+from django.views.generic.detail import DetailView
 
 from .models import Painter
 
@@ -15,3 +16,8 @@ class PaintersListView(TemplateView):
         context['painters'] = Painter.objects.all()
 
         return context
+
+class PainterDetailView(DetailView):
+    model = Painter
+    template_name = 'painter_details.html'
+    context_object_name = 'painter'
